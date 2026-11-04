@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://adriangomezmorales.es/sitemap.xml
 Disallow:
