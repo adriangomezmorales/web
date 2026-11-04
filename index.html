@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio de Adrián Gómez Morales - Especialista en Ciberseguridad, Administración Sistemas y Linux">
+  <meta property="og:title" content="Adrián Gómez Morales - Especialista en Ciberseguridad">
+  <meta property="og:description" content="Portafolio profesional de Adrián Gómez Morales - Experto en seguridad informática y administración de sistemas">
+  <meta property="og:image" content="https://adriangomezmorales.es/foto.jpeg">
+  <meta property="og:url" content="https://adriangomezmorales.es">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Adrián Gómez Morales</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+<!--
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⠚⠁⠀⠀⠀⠀⠀⠈⠉⠉⠒⠒⠦⠤⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠖⠋⠀⠀⢀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠙⠒⠦⢄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠎⠀⠀⠀⠀⠈⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠒⢤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡞⠀⠀⠀⠀⠀⢸⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⠁⠀⠀⠀⠀⠀⢸⠀⠀⢠⠋⠙⢆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠓⣄⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⢠⠔⠒⠦⡇⠀⠀⡸⠀⠀⠘⡄⠀⠀⣠⠀⠀⠀⠀⠀⠀⠀⠠⠖⠒⠉⠀⠀⠀⠀⠀⠀⠈⠳⡄⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡀⠀⣎⠀⠀⠀⠁⠀⠀⡇⠀⢠⢰⠃⠀⠀⡇⠀⢸⠀⢀⡴⠒⢦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⡆⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢇⠀⠘⠒⠀⠀⠀⠀⠀⠸⣄⣸⢯⠀⠀⠀⡇⢀⡜⠀⡜⠀⢀⡜⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⡄⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠧⠀⠀⠓⠋⠀⠐⡗⠚⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢳⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠳⣄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣇⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢳⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⡄⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣆⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⢰⢃⣀⡠⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢣⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣇⠀⠀⠀⠀⠀⡞⠋⠁⣹⠗⠛⢦⠀⠐⠆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⡄
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣆⠀⠀⠀⠘⠁⠀⠀⠉⠀⠀⣼⢀⡤⠀⢠⠟⢦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣤⣤⣤⣤⣤⣶⣦⣤⣄⡀⠀⠀⠀⠀⠘⢦⣀⠀⠀⠀⠀⠀⠀⠀⢸⡇⣸⠁⢀⡎⡤⠤⠇⢀⡤⢤⡀⠀⠀⠀⠀⠀⠀⠀⠊⠙⢢⡀⠀⠀⠀⡇
+⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⡿⠛⠉⠙⠛⠛⠛⠛⠻⢿⣿⣷⣤⡀⠀⠀⠀⡼⠁⠀⠀⠀⠀⠀⠀⠀⠀⠉⠀⠾⠀⢹⠀⢠⢎⣀⠀⣽⠀⣀⣀⠀⠀⠀⠀⠀⠀⠀⢳⠀⠀⠀⡇
+⠀⠀⠀⠀⠀⠀⠀⣼⣿⠋⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⠈⢻⣿⣿⡄⠀⠀⠓⠒⠒⠛⠲⣄⡀⠀⠀⠀⠀⠀⠀⠀⠘⠀⡞⠀⠈⡹⠁⠀⢇⠈⠁⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⡇
+⠀⠀⠀⠀⠀⠀⣸⣿⡏⠀⠀⠀⣠⣶⣾⣿⣿⣿⠿⠿⠿⢿⣿⣿⣿⣄⠀⠀⠀⠀⠀⠀⠀⠙⠲⢄⡀⠀⠀⠀⠀⠀⠀⠁⠀⢠⠃⠀⠀⠸⡄⠀⠀⠀⠀⣀⡀⢀⡔⠁⠀⠀⡇
+⠀⠀⠀⠀⠀⠀⣿⣿⠁⠀⠀⢰⣿⣿⣯⠁⠀⠀⠀⠀⠀⠀⠀⠈⠙⢿⣷⡄⠀⠀⠀⠀⠀⠀⠀⠀⠈⠓⢦⡀⠀⠀⠀⠀⠀⠀⠀⠐⠒⠒⠃⠀⠀⠀⢀⡇⠉⠉⠀⠀⠀⢠⠃
+⠀⣀⣤⣴⣶⣶⣿⡟⠀⠀⠀⢸⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠲⢄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡏⠀⠀⠀⠀⠀⠀⣸⠀
+⢰⣿⡟⠋⠉⣹⣿⡇⠀⠀⠀⠘⣿⣿⣿⣿⣷⣦⣤⣤⣤⣶⣶⣶⣶⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠓⢦⡀⠀⠀⠀⠀⠀⠀⠀⣀⠀⠀⠀⠀⠀⠀⠀⡇⠀
+⢸⣿⡇⠀⠀⣿⣿⡇⠀⠀⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠲⢄⡀⠀⠀⠀⠀⠉⠀⠀⠀⠀⠀⠀⢰⠃⠀
+⣸⣿⡇⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠉⠻⠿⣿⣿⣿⣿⡿⠿⠿⠛⢻⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠓⠦⣄⣀⣀⠀⠀⠀⠀⣀⣠⠃⠀⠀
+⣿⣿⠁⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠉⠀⠀⠀⠀⠀
+⣿⣿⠀⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⣿⣿⠀⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⢿⣿⡆⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠸⣿⣧⡀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠛⢿⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⣰⣿⣿⣷⣶⣶⣶⣶⠶⠀⢠⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⣿⣿⡇⠀⣽⣿⡏⠁⠀⠀⢸⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⣿⣿⡇⠀⢹⣿⡆⠀⠀⠀⣸⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢿⣿⣦⣄⣀⣠⣴⣿⣿⠁⠀⠈⠻⣿⣿⣿⣿⡿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠈⠛⠻⠿⠿⠿⠿⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+-->
+
+<div class="loader-container">
+  <div class="terminal-loader"></div>
+</div>
+
+<canvas class="binary-rain"></canvas>
+
+<div class="container">
+
+  <!-- PERFIL -->
+  <header class="terminal-effect">
+    <div class="window-controls">
+      <button class="window-btn close"></button>
+      <button class="window-btn minimize"></button>
+      <button class="window-btn maximize"></button>
+    </div>
+
+    <div class="content">
+      <div class="header">
+        <img
+          src="./images/foto.jpeg"
+          alt="Adrián Gómez Morales"
+          class="profile-img"
+          loading="lazy"
+        >
+
+        <div>
+          <h1>Adrián Gómez Morales</h1>
+
+          <p>
+            Soy <strong>Adrián Gómez</strong>, Técnico Superior
+            en <strong>Ciberseguridad y Administración de Sistemas</strong>.
+            Tengo experiencia en soporte IT, administración de sistemas
+            Linux, desarrollo web. Actualmente estoy cursando
+            <strong>Desarrollo de Aplicaciones Multiplataforma (DAM).</strong>
+          </p>
+
+          <div class="contact-grid">
+            <a href="/cdn-cgi/l/email-protection#e1898e8d80a180859388808f868e8c849b8c8e93808d8492cf8492">
+              <div class="contact-card">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+                Correo electrónico
+              </div>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/adrian-gomez-morales/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="contact-card">
+                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                LinkedIn
+              </div>
+            </a>
+          </div>
+
+          <div class="contact-grid">
+            <a href="./Adrian-Gomez-Morales-CV.pdf">
+              <div class="contact-card">
+                <i class="fas fa-newspaper" aria-hidden="true"></i>
+                Currículum Vitae
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- FORMACIÓN -->
+  <section class="terminal-effect">
+    <div class="window-controls">
+      <button class="window-btn close"></button>
+      <button class="window-btn minimize"></button>
+      <button class="window-btn maximize"></button>
+    </div>
+
+    <div class="content">
+      <h2>FORMACIÓN</h2>
+
+      <ul>
+        <li>
+          <strong>
+            Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)
+          </strong>
+          <div class="subtext">
+            I.E.S. Nervión | Septiembre de 2026 - Actualmente
+          </div>
+        </li>
+
+        <li>
+          <strong>
+            Máster FP en Ciberseguridad en Entornos de las Tecnologías
+            de la Información
+          </strong>
+          <div class="subtext">
+            I.E.S. Martínez Montañés |
+            Octubre de 2024 - Junio de 2025
+          </div>
+        </li>
+
+        <li>
+          <strong>
+            Técnico Superior en Administración de Sistemas Informáticos
+            en Red (ASIR)
+          </strong>
+          <div class="subtext">
+            I.E.S. Triana | Septiembre de 2022 - Junio de 2024
+          </div>
+        </li>
+
+        <li>
+          <strong>
+            Técnico en Sistemas Microinformáticos y Redes (SMR)
+          </strong>
+          <div class="subtext">
+            I.E.S. Los Alcores | Septiembre de 2019 - Junio de 2022
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- EXPERIENCIA LABORAL -->
+  <section class="terminal-effect">
+    <div class="window-controls">
+      <button class="window-btn close"></button>
+      <button class="window-btn minimize"></button>
+      <button class="window-btn maximize"></button>
+    </div>
+
+    <div class="content">
+      <h2>EXPERIENCIA LABORAL</h2>
+
+      <ul>
+        <li>
+          <strong>Técnico Auxiliar Administrativo</strong>
+
+          <div class="subtext">
+            Fundación Gerón | Mairena del Alcor, España |
+            Abril de 2026 - Mayo de 2026
+          </div>
+
+          <ul>
+            <li>
+              Preparación, organización y procesado de documentos
+              administrativos.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Soporte IT y Desarrollador Web</strong>
+
+          <div class="subtext">
+            Grupo Empresarial Ether S.L. |
+            Mairena del Aljarafe, España |
+            Febrero de 2024 - Septiembre de 2024
+          </div>
+
+          <ul>
+            <li>Administración de servidores Linux.</li>
+            <li>
+              Desarrollo y mantenimiento de sitios web WordPress
+              y WooCommerce.
+            </li>
+            <li>Desarrollo y mantenimiento de aplicaciones web PHP.</li>
+            <li>Soporte técnico a clientes y usuarios internos.</li>
+            <li>Mantenimiento y reparación de ordenadores.</li>
+            <li>Gestión de copias de seguridad y recuperación de datos.</li>
+            <li>Gestión de tickets de soporte.</li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Técnico Auxiliar Informático</strong>
+
+          <div class="subtext">
+            EUROTEX TCH | El Viso del Alcor, España |
+            Febrero de 2022 - Mayo de 2022
+          </div>
+
+          <ul>
+            <li>
+              Instalación, configuración y mantenimiento de sistemas
+              operativos Windows.
+            </li>
+            <li>
+              Mantenimiento y resolución de problemas de redes informáticas.
+            </li>
+            <li>Gestión de copias de seguridad.</li>
+            <li>
+              Instalación y configuración de impresoras y otros periféricos.
+            </li>
+            <li>Soporte técnico a usuarios finales.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- PROYECTOS PERSONALES -->
+  <section class="terminal-effect">
+    <div class="window-controls">
+      <button class="window-btn close"></button>
+      <button class="window-btn minimize"></button>
+      <button class="window-btn maximize"></button>
+    </div>
+
+    <div class="content">
+      <h2>PROYECTOS PERSONALES</h2>
+
+      <ul>
+
+        <!-- TELEGGOMMOR -->
+        <li>
+          <strong>
+            Telegommor - Herramienta de análisis forense para Telegram
+          </strong>
+
+          <div class="subtext">
+            Python · SQLite · Análisis forense digital · Informes PDF
+          </div>
+
+          <br>
+
+          <p>
+            Desarrollé <strong>Telegommor</strong>, una herramienta
+            en Python para analizar la base de datos
+            <strong>cache4.db</strong> de Telegram. Permite extraer,
+            analizar y visualizar información almacenada y generar
+            automáticamente informes forenses estructurados en PDF.
+          </p>
+
+          <br>
+
+          <div class="contact-grid" style="margin: 0 auto; width: 200px;">
+            <a
+              href="https://github.com/adriangomezmorales/telegommor"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="contact-card">
+                <i class="fab fa-github" aria-hidden="true"></i>
+                GitHub
+              </div>
+            </a>
+          </div>
+        </li>
+
+        <br>
+
+        <!-- SERVIDOR DE MINECRAFT -->
+        <li>
+          <strong>
+            Servidor de juegos con alta disponibilidad y aplicación web
+          </strong>
+
+          <div class="subtext">
+            Debian · Linux · Java · PHP · HTML · CSS · MySQL ·
+            Docker · Kubernetes
+          </div>
+
+          <br>
+
+          <p>
+            Diseñé e implementé una infraestructura para un servidor
+            de Minecraft integrado con una aplicación web y una base
+            de datos MySQL para gestionar usuarios y consultar las
+            estadísticas de los jugadores.
+          </p>
+
+          <br>
+
+          <p>
+            Desarrollé un <strong>plugin en Java</strong> que recopila
+            y sincroniza las estadísticas de los jugadores con MySQL,
+            así como una aplicación web en PHP con registro,
+            autenticación y consulta de estadísticas.
+          </p>
+
+          <br>
+
+          <p>
+            Containericé los servicios mediante <strong>Docker</strong>
+            y los desplegué en un clúster de <strong>Kubernetes</strong>
+            configurado para alta disponibilidad, con dos réplicas
+            de cada servicio sobre una infraestructura Debian.
+          </p>
+
+          <br>
+
+          <div class="contact-grid">
+            <a
+              href="/proyectos/proyecto_asir_adrian_gomez_morales.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="contact-card">
+                <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                Documentación
+              </div>
+            </a>
+
+            <a
+              href="https://youtu.be/DHkOslKh8Sc"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="contact-card">
+                <i class="fas fa-video" aria-hidden="true"></i>
+                Vídeo demostrativo
+              </div>
+            </a>
+          </div>
+        </li>
+
+        <br>
+
+        <!-- ORDENADOR RETRO -->
+        <li>
+          <strong>
+            Ordenador Retro con caja diseñada a medida
+          </strong>
+
+          <div class="subtext">
+            Raspberry Pi 400 · Debian 11 · XFCE4 · Linux ·
+            Hardware · Montaje de ordenadores · Diseño de chasis
+          </div>
+
+          <br>
+
+          <p>
+            Desarrollé un proyecto práctico titulado
+            <strong>«Ordenador Retro»</strong>, cuyo objetivo fue diseñar
+            y montar un ordenador portátil funcional utilizando una
+            <strong>Raspberry Pi 400</strong>, un monitor portátil de
+            7 pulgadas, una tarjeta de sonido Waveshare, una batería
+            de alta capacidad y un HUB USB.
+          </p>
+
+          <br>
+
+          <p>
+            Integré todos los componentes en una caja de madera
+            contrachapada fabricada a medida. El diseño incluyó el
+            ensamblaje del chasis, la distribución interna de los
+            componentes y la instalación del hardware, buscando un
+            equilibrio entre funcionalidad y estética.
+          </p>
+
+          <br>
+
+          <p>
+            Como sistema operativo, instalé <strong>Debian 11 con
+            escritorio XFCE4</strong>, optimizado para Raspberry Pi,
+            y configuré los controladores necesarios para garantizar
+            la compatibilidad con la tarjeta de sonido.
+          </p>
+
+          <br>
+
+          <div class="contact-grid" style="margin: 0 auto; width: 220px;">
+            <a
+              href="/proyectos/trabajo_fundamentos_del_hardware_adrian_gomez_morales.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="contact-card">
+                <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                Documentación
+              </div>
+            </a>
+          </div>
+        </li>
+
+        <br>
+
+        <!-- DOORSTOP REPO -->
+        <li>
+          <strong>
+            Doorstop Repo - BepInEx Loader para Linux
+          </strong>
+
+          <div class="subtext">
+            Linux · Bash · Steam · Proton · BepInEx ·
+            Doorstop · r2modman
+          </div>
+
+          <br>
+
+          <p>
+            Desarrollé un <strong>script de automatización para Linux</strong>
+            que permite cargar BepInEx desde perfiles de r2modman utilizando
+            winhttp.dll y Doorstop bajo Proton. Su objetivo
+            es solucionar un fallo de compatibilidad específica para el videojuego R.E.P.O.
+          </p>
+          <br>
+          <div class="contact-grid" style="margin: 0 auto; width: 200px;">
+            <a
+              href="https://github.com/adriangomezmorales/doorstop-repo"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="contact-card">
+                <i class="fab fa-github" aria-hidden="true"></i>
+                GitHub
+              </div>
+            </a>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/scripts/binario.js"></script>
+<script src="/scripts/loader.js"></script>
+
+</body>
+</html>
